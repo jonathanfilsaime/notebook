@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+    <link rel="stylesheet" href="../static/main.css">
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+
+</head>
+
+<body>
+<div class="navbar">
+    <a href="/notes">Notes</a>
+    <a href="/newnote">New Note</a>
+    <a href="#home">Topic</a>
+    <a href="#news">Links</a>
+    <a href="/logout">logout</a>
+</div>
+<h2 class= label style="font-family: monospace">new note</h2>
+<form method="post">
+    <h4 class= label style="font-family: monospace">subject</h4>
+    <input name="subject" style="height: 20px; width: 1000px;" >
+    <h4 class= label style="font-family: monospace">content</h4>
+    <textarea  placeholder="This is an awesome comment box" name="content" id="comment_text"
+              class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list"
+              aria-haspopup="true" style="width: 1000px; height: 500px;"></textarea>
+
+
+    <br>
+    <br>
+    <input type="submit" class='button'>
+    <input type="submit" value="cancel" name="cancel" class='button'>
+</form>
+
+
+</body></html>
+
+

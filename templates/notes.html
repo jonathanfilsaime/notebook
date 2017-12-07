@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+    <link rel="stylesheet" href="../static/main.css">
+</head>
+
+<body>
+<div class="navbar">
+    <a href="/notes">Notes</a>
+    <a href="/newnote">New Note</a>
+    <a href="#">Topic</a>
+    <a href="">Links</a>
+    <a href="/logout">logout</a>
+</div>
+
+
+{% for note in allNotes: %}
+
+<div class="chapter">
+    <div class="chapter__wrapper">
+        <div class="chapter__text">
+            <h2 class="chapter__heading">{{note.subject}}</h2>
+            <p class="chapter__description">{{note.content}} </p>
+        </div>
+   </div>
+</div>
+
+<br>
+<br>
+{% endfor %}
+
+</body>
+</html>
+
+
+
+
