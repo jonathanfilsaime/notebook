@@ -14,8 +14,6 @@
 
 
 import webapp2
-
-from Home import Home
 from Login import Login
 from Newnote import Newnote
 from Notes import Notes
@@ -23,10 +21,14 @@ from Delete import Delete
 from Pw import Pw
 from Clear import Clear
 from Logout import Logout
+from SpecificNote import SpecificNote
+
+
 
 app = webapp2.WSGIApplication([('/', Login),
                                ('/newnote', Newnote),
                                ('/notes', Notes),
+                               (r'/note/(\d+)', SpecificNote),
                                ('/delete', Delete),
                                ('/setps', Pw),
                                ('/clear', Clear),
