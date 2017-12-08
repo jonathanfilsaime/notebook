@@ -17,3 +17,6 @@ class Handler(webapp2.RequestHandler):
 
     def render(self, template, **kw):
         self.write(self.render_str(template, **kw))
+
+    def renderme(self, template, **kw):
+        self.write(**kw)
