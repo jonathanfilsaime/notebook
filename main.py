@@ -14,16 +14,6 @@
 
 
 import webapp2
-# from SignUp import Signup
-# from Welcome import Welcome
-# from Login import Login
-# from NewPost import Newpost
-# from Blog import Blog
-# from SpecificPost import SpecificPost
-# from LogOut import Logout
-# from Test import Test
-# from Editpost import Editpost
-# from DeletePost import DeletePost
 
 from Home import Home
 from Login import Login
@@ -34,20 +24,7 @@ from Pw import Pw
 from Clear import Clear
 from Logout import Logout
 
-# app = webapp2.WSGIApplication([('/blog', Blog),
-#                                (r'/blog/(\d+)', SpecificPost),
-#                                ('/blog/newpost', Newpost),
-#                                (r'/blog/editpost/(\d+)', Editpost),
-#                                ('/blog/signup', Signup),
-#                                ('/welcome', Welcome),
-#                                ('/blog/login', Login),
-#                                ('/blog/logout',Logout),
-#                                (r'/blog/delete/(\d+)', DeletePost),
-#                                ('/test', Test),
-#                                (r'/blog/test/(\d+)', Test)],
-#                                 debug=True)
-
-app = webapp2.WSGIApplication([('/', Home),
+app = webapp2.WSGIApplication([('/', Login),
                                ('/newnote', Newnote),
                                ('/notes', Notes),
                                ('/delete', Delete),
