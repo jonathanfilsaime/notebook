@@ -13,7 +13,7 @@ class Login(Handler):
 
         if check.validate(username, password):
             self.response.headers.add_header('Set-Cookie', 'key=%s ; Path=/' %key)
-            self.redirect('/newnote')
+            self.redirect('/notes')
         else:
             self.redirect('/login')
 

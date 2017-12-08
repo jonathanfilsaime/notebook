@@ -12,24 +12,39 @@
 <div class="navbar">
     <a href="/notes">Notes</a>
     <a href="/newnote">New Note</a>
-    <a href="#home">Topic</a>
-    <a href="#news">Links</a>
     <a href="/logout">logout</a>
 </div>
-<h2 class= label style="font-family: monospace">new note</h2>
 <form method="post">
-    <h4 class= label style="font-family: monospace">subject</h4>
-    <input name="subject" style="height: 20px; width: 1000px;" >
+    {% if note %}
+        {% for n in note %}
+    <h4 class= label style="font-family: monospace; padding-top: 40px">subject</h4>
+    <input name="subject" style="height: 20px; width: 1000px;" value="{{ n.subject }}">
+
     <h4 class= label style="font-family: monospace">content</h4>
     <textarea  placeholder="This is an awesome comment box" name="content" id="comment_text"
               class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list"
-              aria-haspopup="true" style="width: 1000px; height: 500px;"></textarea>
+              aria-haspopup="true" style="width: 1000px; height: 500px;">{{ n.content }}</textarea>
+    <br>
+    <br>
+    <input type="submit" value="update" name="update" class='button'>
+    <input type="submit" value="cancel" name="cancel" class='button'>
+        {% endfor %}
+    {% else  %}
+    <h4 class= label style="font-family: monospace; padding-top: 40px">subject</h4>
+    <input name="subject" style="height: 20px; width: 1000px;">
 
-
+    <h4 class= label style="font-family: monospace">content</h4>
+    <textarea  placeholder="This is an awesome comment box" name="content" id="comment_text"
+               class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list"
+               aria-haspopup="true" style="width: 1000px; height: 500px;"></textarea>
     <br>
     <br>
     <input type="submit" class='button'>
     <input type="submit" value="cancel" name="cancel" class='button'>
+
+    {% endif %}
+
+
 </form>
 
 
