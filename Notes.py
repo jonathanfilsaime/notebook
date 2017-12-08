@@ -1,4 +1,4 @@
-# import json
+import json
 from Handler import Handler
 from NoteDB import Note
 from Validation import Validation
@@ -22,7 +22,8 @@ class Notes(Handler):
             #     }
             #     notesDictionary.append(noteDic)
             #
-            # self.response.write(notesDictionary)
+            # self.response.write(json.dumps(notesDictionary))
+
             self.render("notes.html", allNotes=allNotes)
         else:
             self.redirect('/login')
